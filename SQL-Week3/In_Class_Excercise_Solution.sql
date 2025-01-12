@@ -3488,4 +3488,12 @@ on P.SupplierID = S.ID;
 
 Select * from ProductInventory
 
+-- Cross Join 
+select count(*)
+from
+(
+Select FirstName, OrderNumber from customer
+cross join orders
+) as T
+
 
